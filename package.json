@@ -1,0 +1,32 @@
+{
+  "name": "react-native-media-thumbnail",
+  "version": "1.0.0",
+  "description": "Create thumbnail and get data from Video/Image/Audio for react-native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://github.com/InoSoftCo/react-native-media-thumbnail",
+  "keywords": [
+    "react-native",
+    "react-native-module",
+    "android",
+    "ios",
+    "thumbnail",
+    "video",
+    "image",
+    "audio"
+  ],
+  "author": "Balal Arast <arastbalal@gmail.com> (https://github.com/balalarast)",
+  "license": "MIT",
+  "peerDependencies": {
+    "react-native": "^0.41.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InoSoftCo/react-native-media-thumbnail.git"
+  },
+  "bugs": {
+    "url": "https://github.com/InoSoftCo/react-native-media-thumbnail/issues"
+  }
+}
