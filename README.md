@@ -90,9 +90,7 @@ RNMediaThumbnail.getImageThumb(
 	});
 ```
 
-
-
-#### saveImageThumb
+#### getAudioThumb
 
 RNMediaThumbnail.getAudioThumb(
 	'AUDIO_PATH.mp3',
