@@ -53,6 +53,7 @@ RNMediaThumbnail.saveVideoThumb(
 	});
 ```
 
+```javascript
 #### getVideoThumb
 
 RNMediaThumbnail.getVideoThumb(
@@ -65,6 +66,7 @@ RNMediaThumbnail.getVideoThumb(
 	});
 ```
 
+```javascript
 #### saveImageThumb
 
 RNMediaThumbnail.saveImageThumb(
@@ -78,6 +80,7 @@ RNMediaThumbnail.saveImageThumb(
 	});
 ```
 
+```javascript
 #### getImageThumb
 
 RNMediaThumbnail.getImageThumb(
@@ -90,6 +93,7 @@ RNMediaThumbnail.getImageThumb(
 	});
 ```
 
+```javascript
 #### getAudioThumb
 
 RNMediaThumbnail.getAudioThumb(
