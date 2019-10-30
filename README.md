@@ -43,15 +43,63 @@ import RNMediaThumbnail from 'react-native-media-thumbnail';
 #### saveVideoThumb
 
 RNMediaThumbnail.saveVideoThumb(
-			'VIDEO_PATH.mp4',
-			'DESTINATION_PATH.jpg',
-			true, // use jpeg = true| use png = false
-			(params) => {
-				console.log(params);
-			}, (e) => {
-				console.log('Error: ', e);
-			});
+	'VIDEO_PATH.mp4',
+	'DESTINATION_PATH.{jpg|png}',
+	true, // use jpeg = true| use png = false
+	(params) => {
+		console.log(params);
+	}, (e) => {
+		console.log('Error: ', e);
+	});
+```
+
+#### getVideoThumb
+
+RNMediaThumbnail.getVideoThumb(
+	'VIDEO_PATH.mp4',
+	true, // use jpeg = true| use png = false
+	(params) => {
+		console.log(params);
+	}, (e) => {
+		console.log('Error: ', e);
+	});
+```
+
+#### saveImageThumb
+
+RNMediaThumbnail.saveImageThumb(
+	'IMAGE_PATH.{jpg|png}',
+	'DESTINATION_PATH.{jpg|png}',
+	true, // use jpeg = true| use png = false
+	(params) => {
+		console.log(params);
+	}, (e) => {
+		console.log('Error: ', e);
+	});
+```
+
+#### getImageThumb
+
+RNMediaThumbnail.getImageThumb(
+	'IMAGE_PATH.{jpg|png}',
+	true, // use jpeg = true| use png = false
+	(params) => {
+		console.log(params);
+	}, (e) => {
+		console.log('Error: ', e);
+	});
 ```
 
 
-  
+
+#### saveImageThumb
+
+RNMediaThumbnail.getAudioThumb(
+	'AUDIO_PATH.mp3',
+	true, // use jpeg = true| use png = false
+	(params) => {
+		console.log(params);
+	}, (e) => {
+		console.log('Error: ', e);
+	});
+```
