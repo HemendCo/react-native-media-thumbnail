@@ -101,3 +101,4 @@ RNMediaThumbnail.getAudioThumb(
 		console.log('Error: ', e);
 	});
 ```
+
