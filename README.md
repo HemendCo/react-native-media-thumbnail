@@ -40,6 +40,18 @@
 import RNMediaThumbnail from 'react-native-media-thumbnail';
 
 // TODO: What to do with the module?
-RNMediaThumbnail;
+#### saveVideoThumb
+
+RNMediaThumbnail.saveVideoThumb(
+			'VIDEO_PATH.mp4',
+			'DESTINATION_PATH.jpg',
+			true, // use jpeg = true| use png = false
+			(params) => {
+				console.log(params);
+			}, (e) => {
+				console.log('Error: ', e);
+			});
 ```
+
+
   
