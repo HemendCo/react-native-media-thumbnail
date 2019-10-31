@@ -33,7 +33,11 @@
     ```
       compile project(':react-native-media-thumbnail')
     ```
-
+4. Add all wanted permissions to your app android/app/src/main/AndroidManifest.xml file:
+    ```
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    ```
 
 ## Usage
 ```javascript
