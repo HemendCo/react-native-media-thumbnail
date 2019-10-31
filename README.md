@@ -40,7 +40,7 @@
 import RNMediaThumbnail from 'react-native-media-thumbnail';
 
 // TODO: What to do with the module?
-#### Save thumbnail video and get data: {width,height,duration,thumbnail_width,thumbnail_height,thumbnail_uri}
+// Save thumbnail video and get data: {width,height,duration,thumbnail_width,thumbnail_height,thumbnail_uri}
 
 RNMediaThumbnail.saveVideoThumb(
     'VIDEO_PATH.mp4',
@@ -54,7 +54,7 @@ RNMediaThumbnail.saveVideoThumb(
 ```
 
 ```javascript
-#### Get thumbnail video data: {width,height,duration,thumbnail_width,thumbnail_height,thumbnail_base64}
+// Get thumbnail video data: {width,height,duration,thumbnail_width,thumbnail_height,thumbnail_base64}
 
 RNMediaThumbnail.getVideoThumb(
     'VIDEO_PATH.mp4',
@@ -67,7 +67,7 @@ RNMediaThumbnail.getVideoThumb(
 ```
 
 ```javascript
-#### Save thumbnail image and get data: {width,height,thumbnail_width,thumbnail_height,thumbnail_uri}
+// Save thumbnail image and get data: {width,height,thumbnail_width,thumbnail_height,thumbnail_uri}
 
 RNMediaThumbnail.saveImageThumb(
     'IMAGE_PATH.{jpg|png}',
@@ -81,7 +81,7 @@ RNMediaThumbnail.saveImageThumb(
 ```
 
 ```javascript
-#### Get thumbnail image data: {width,height,thumbnail_width,thumbnail_height,thumbnail_base64}
+// Get thumbnail image data: {width,height,thumbnail_width,thumbnail_height,thumbnail_base64}
 
 RNMediaThumbnail.getImageThumb(
     'IMAGE_PATH.{jpg|png}',
@@ -94,7 +94,7 @@ RNMediaThumbnail.getImageThumb(
 ```
 
 ```javascript
-#### Get audio data: {duration,(if has cover)[width,height,base64,thumbnail_width,thumbnail_height,thumbnail_base64]}
+// Get audio data: {duration,(if has cover)[width,height,base64,thumbnail_width,thumbnail_height,thumbnail_base64]}
 
 RNMediaThumbnail.getAudioThumb(
     'AUDIO_PATH.mp3',
