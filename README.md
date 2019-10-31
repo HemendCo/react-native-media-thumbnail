@@ -39,7 +39,6 @@
 ```javascript
 import RNMediaThumbnail from 'react-native-media-thumbnail';
 
-// TODO: What to do with the module?
 // Save thumbnail video and get data: {width,height,duration,thumbnail_width,thumbnail_height,thumbnail_uri}
 
 RNMediaThumbnail.saveVideoThumb(
@@ -54,6 +53,8 @@ RNMediaThumbnail.saveVideoThumb(
 ```
 
 ```javascript
+import RNMediaThumbnail from 'react-native-media-thumbnail';
+
 // Get thumbnail video data: {width,height,duration,thumbnail_width,thumbnail_height,thumbnail_base64}
 
 RNMediaThumbnail.getVideoThumb(
@@ -67,6 +68,8 @@ RNMediaThumbnail.getVideoThumb(
 ```
 
 ```javascript
+import RNMediaThumbnail from 'react-native-media-thumbnail';
+
 // Save thumbnail image and get data: {width,height,thumbnail_width,thumbnail_height,thumbnail_uri}
 
 RNMediaThumbnail.saveImageThumb(
@@ -81,6 +84,8 @@ RNMediaThumbnail.saveImageThumb(
 ```
 
 ```javascript
+import RNMediaThumbnail from 'react-native-media-thumbnail';
+
 // Get thumbnail image data: {width,height,thumbnail_width,thumbnail_height,thumbnail_base64}
 
 RNMediaThumbnail.getImageThumb(
@@ -94,6 +99,8 @@ RNMediaThumbnail.getImageThumb(
 ```
 
 ```javascript
+import RNMediaThumbnail from 'react-native-media-thumbnail';
+
 // Get audio data: {duration,(if has cover)[width,height,base64,thumbnail_width,thumbnail_height,thumbnail_base64]}
 
 RNMediaThumbnail.getAudioThumb(
