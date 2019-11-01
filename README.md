@@ -40,76 +40,84 @@ Currently No Support
 ```javascript
 import RNMediaThumbnail from 'react-native-media-thumbnail';
 
-// Save thumbnail video and get data: {width,height,duration,thumbnail_width,thumbnail_height,thumbnail_uri}
-
-RNMediaThumbnail.saveVideoThumb(
-    'VIDEO_PATH.mp4',
-    'DESTINATION_PATH.{jpg|png}',
-    true, // use jpeg = true| use png = false
+RNMediaThumbnail.getMedia(
+    'FILE_PATH', // <------- uri: {Image, Video, Audio}
+    {
+      'poster': // <------- Optional
+      {
+        'export_uri': 'DESTINATION_FILE_PATH', // <------- Allowed: {jpg, png}
+      },
+      'thumbnail': // <------- Optional
+      {
+        'export_uri': 'Base64', // <------- Allowed: {Base64, DESTINATION_FILE_PATH}
+        'export_type': 'jpg', // <------- Allowed: {jpg, png} - Default: jpg
+        'width': 200,
+        'height': 200
+      }
+    },
     (params) => {
-        console.log(params);
+      console.log(params);
     }, (e) => {
-        console.log('Error: ', e);
+      console.log('Error: ', e);
     });
 ```
+---
 
 ```javascript
 import RNMediaThumbnail from 'react-native-media-thumbnail';
 
-// Get thumbnail video data: {width,height,duration,thumbnail_width,thumbnail_height,thumbnail_base64}
-
-RNMediaThumbnail.getVideoThumb(
-    'VIDEO_PATH.mp4',
-    true, // use jpeg = true| use png = false
+RNMediaThumbnail.getMedia(
+    'FILE_PATH', // <------- uri: {Image, Video, Audio}
+    {
+      'poster': // <------- Optional
+      {
+        'export_uri': 'Base64', // <------- Allowed: {Base64, DESTINATION_FILE_PATH}
+        'export_type': 'png', // <------- Allowed: {jpg, png} - Default: jpg
+      },
+      'thumbnail': // <------- Optional
+      {
+        'export_uri': 'DESTINATION_FILE_PATH', // <------- Allowed: {jpg, png}
+        'width': 200,
+        'height': 200
+      }
+    },
     (params) => {
-        console.log(params);
+      console.log(params);
     }, (e) => {
-        console.log('Error: ', e);
+      console.log('Error: ', e);
     });
 ```
+---
 
-```javascript
-import RNMediaThumbnail from 'react-native-media-thumbnail';
+## Input
+| Param        | Required           | Value  |
+| ------------- |:-------------:|:-------------:|
+| uri      | Yes | String  |
+| poster      | No |   Object   |
+| poster.export_uri | Yes: [ poster ] not empty |    String: `Base64` _or_ `DESTINATION_FILE_PATH` |
+| poster.export_type | Yes: [ poster.export_uri ] = `Base64` |    String: `jpg` _or_ `png` |
+| thumbnail      | No |   Object   |
+| thumbnail.export_uri | Yes: [ thumbnail ] not empty |    String: `Base64` _or_ `DESTINATION_FILE_PATH` |
+| thumbnail.export_type | Yes: [ thumbnail.export_uri ] = `Base64` |    String: `jpg` _or_ `png` |
+| thumbnail.width | Yes: [ thumbnail ] not empty  |    Int    |
+| thumbnail.height | Yes: [ thumbnail ] not empty  |    Int    |
 
-// Save thumbnail image and get data: {width,height,thumbnail_width,thumbnail_height,thumbnail_uri}
-
-RNMediaThumbnail.saveImageThumb(
-    'IMAGE_PATH.{jpg|png}',
-    'DESTINATION_PATH.{jpg|png}',
-    true, // use jpeg = true| use png = false
-    (params) => {
-        console.log(params);
-    }, (e) => {
-        console.log('Error: ', e);
-    });
-```
-
-```javascript
-import RNMediaThumbnail from 'react-native-media-thumbnail';
-
-// Get thumbnail image data: {width,height,thumbnail_width,thumbnail_height,thumbnail_base64}
-
-RNMediaThumbnail.getImageThumb(
-    'IMAGE_PATH.{jpg|png}',
-    true, // use jpeg = true| use png = false
-    (params) => {
-        console.log(params);
-    }, (e) => {
-        console.log('Error: ', e);
-    });
-```
-
-```javascript
-import RNMediaThumbnail from 'react-native-media-thumbnail';
-
-// Get audio data: {duration,(if has cover)[width,height,base64,thumbnail_width,thumbnail_height,thumbnail_base64]}
-
-RNMediaThumbnail.getAudioThumb(
-    'AUDIO_PATH.mp3',
-    true, // use jpeg = true| use png = false
-    (params) => {
-        console.log(params);
-    }, (e) => {
-        console.log('Error: ', e);
-    });
-```
+## Output
+| Param        | Media           | Value  |
+| ------------- |:-------------:|:-------------:|
+| width      | Image, Video | Int  |
+| height      | Image, Video |   Int   |
+| size | * |    Double |
+| duration | Video, Audio |    Double |
+| poster | *  |    Object / null    |
+| poster.width | *  |    Int    |
+| poster.height | *  |    Int    |
+| poster.size | *  |    Double    |
+| poster.uri | *  |    String: `Base64` _or_ `DESTINATION_FILE_PATH`    |
+| poster.format | *  |    String: `jpg` _or_ `png`    |
+| thumbnail | *  |    Object / null    |
+| thumbnail.width | *  |    Int    |
+| thumbnail.height | *  |    Int    |
+| thumbnail.size | *  |    Double    |
+| thumbnail.uri | *  |    String: `Base64` _or_ `DESTINATION_FILE_PATH`    |
+| thumbnail.format | *  |    String: `jpg` _or_ `png`    |
