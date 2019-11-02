@@ -1,5 +1,26 @@
 
 # react-native-media-thumbnail
+This component gives power you to extract metadata such as **_poster(cover), duration, size, etc.,_** that there are in the **_video, audio, and pictures_** files.
+> Of Course, if there is a poster in an audio file you can extract it,
+otherwise, the null value is returned.
+## what kind of information and data can we extract by this component?
+
+**Video files:**
+* Duration
+* width and height
+* Size
+* Thumbnail
+* Poster
+
+**Audio files:**
+* Duration
+* Size
+* Thumbnail and Poster if exist
+
+**Pictures:**
+* Thumbnail
+* Poster
+* converting(jpg/png)
 
 ## Getting started
 
