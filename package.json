@@ -11,7 +11,6 @@
     "react-native",
     "react-native-module",
     "android",
-    "ios",
     "poster",
     "thumbnail",
     "cover",
