@@ -182,7 +182,8 @@ public class RNMediaThumbnailModule extends ReactContextBaseJavaModule {
 	        
 			width = opt.outWidth;
 			height = opt.outHeight;
-
+			
+			params.putString("media_type", "Image");
 			params.putInt("width", width);
 			params.putInt("height", height);
 			params.putDouble("size", new Double(byteSizeOf(poster_bmp)));
@@ -198,7 +199,8 @@ public class RNMediaThumbnailModule extends ReactContextBaseJavaModule {
 			long duration = Long.parseLong(retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION));
 			width = Integer.valueOf(retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH));
 			height = Integer.valueOf(retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_HEIGHT));
-
+			
+			params.putString("media_type", "Video");
 			params.putDouble("duration", duration);
 			params.putInt("width", width);
 			params.putInt("height", height);
@@ -216,6 +218,7 @@ public class RNMediaThumbnailModule extends ReactContextBaseJavaModule {
 			width = poster_bmp.getWidth();
 			height = poster_bmp.getHeight();
 			
+			params.putString("media_type", "Audio");
 			params.putDouble("duration", duration);
 			params.putDouble("size", new File(uri).length());
 		}
