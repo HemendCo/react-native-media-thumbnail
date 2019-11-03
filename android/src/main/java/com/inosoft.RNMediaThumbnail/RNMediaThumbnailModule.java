@@ -46,14 +46,14 @@ public class RNMediaThumbnailModule extends ReactContextBaseJavaModule {
 	private final ReactApplicationContext reactContext;
 	private final GRP grp;
 	
-    static final int TYPE_IMAGE = 1;
-    static final int TYPE_VIDEO = 2;
-    static final int TYPE_AUDIO = 3;
-    
-    static final String[] EXPORT_TYPES = {"jpg", "png"};
-    
-    static final String POSTER_EXPORT_TYPE = "png";
-    static final String THUMBNAIL_EXPORT_TYPE = "jpg";
+	static final int TYPE_IMAGE = 1;
+	static final int TYPE_VIDEO = 2;
+	static final int TYPE_AUDIO = 3;
+	
+	static final String[] EXPORT_TYPES = {"jpg", "png"};
+	
+	static final String POSTER_EXPORT_TYPE = "png";
+	static final String THUMBNAIL_EXPORT_TYPE = "jpg";
 
 	public RNMediaThumbnailModule(ReactApplicationContext reactContext) {
 		super(reactContext);
@@ -176,10 +176,10 @@ public class RNMediaThumbnailModule extends ReactContextBaseJavaModule {
 		}
 		
 		if(mediaType == TYPE_IMAGE) {
-	        BitmapFactory.Options opt = new BitmapFactory.Options();
-	        opt.inPreferredConfig = Bitmap.Config.ARGB_8888;
-	        poster_bmp = BitmapFactory.decodeFile(uri, opt);
-	        
+			BitmapFactory.Options opt = new BitmapFactory.Options();
+			opt.inPreferredConfig = Bitmap.Config.ARGB_8888;
+			poster_bmp = BitmapFactory.decodeFile(uri, opt);
+			
 			width = opt.outWidth;
 			height = opt.outHeight;
 			
