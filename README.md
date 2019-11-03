@@ -126,6 +126,7 @@ RNMediaThumbnail.getMedia(
 ## Output
 | Param        | Media           | Value  |
 | ------------- |:-------------:|:-------------:|
+| media_type | *  |    String: `Image` _or_ `Video` _or_ `Audio`    |
 | width      | Image, Video | Int  |
 | height      | Image, Video |   Int   |
 | size | * |    Double |
